@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/parkingLot/parkingLot",
+    "pages/addParkingLot/addParkingLot",
+    "pages/parkingSpace/parkingSpace",
+    "pages/addParkingSpace/addParkingSpace",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#179B16",
+    "navigationBarTitleText": "蓝牙定位",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F8F8"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

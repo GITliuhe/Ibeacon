@@ -1,0 +1,31 @@
+<!--pages/addParkingSpace/addParkingSpace.wxml-->
+<view class="container">
+	<view class="header {{scrollDown?'hidden':''}}">
+		<image class="logo" src="../../images/parkingLot.png"/>
+		<view class="name ellipsis">{{parkingLotName}}</view>
+		<view class="line"></view>
+	</view>
+
+    <view class="content-container">
+        <view class='input'>
+        <input placeholder='请输入车位编号' name = "parkingLotName" bindblur="InputAreaNum" value='{{form_info}}'/>
+    </view>
+
+    <view class='input'>
+        <input placeholder='请输入车位X坐标' name = "parkingLotAddress" bindblur="InputX" value='{{form_info}}' />
+    </view>
+
+    <view class='input'>
+        <input placeholder='请输入车位Y坐标' name = "beaconName" bindblur="InputY" value='{{form_info}}' />
+    </view>
+    </view>
+    
+
+    <view class='submitdata' >
+        <button type="primary" bindtap="upload">
+            添加
+        </button>
+    </view>
+
+
+</view>

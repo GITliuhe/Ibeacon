@@ -1,0 +1,32 @@
+<!--pages/addParkingLot/addParkingLot.wxml-->
+<view class='input'>
+<text></text>
+  <input placeholder='请输入停车场名称' name = "parkingLotName" bindblur="InputParkingLotName" value='{{form_info}}'/>
+</view>
+
+<view class='input'>
+    <text></text>
+  <input placeholder='请输入停车场地址' name = "parkingLotAddress" bindblur="InputAddress" value='{{form_info}}' />
+</view>
+
+<view class='input'>
+    <text></text>
+  <input placeholder='请输入布点信标名称' name = "beaconName" bindblur="InputBeaconName" value='{{form_info}}' />
+</view>
+  
+
+<wxs module="utils">
+  module.exports.max = function(n1, n2) {
+    return Math.max(n1, n2)
+  }
+  module.exports.len = function(arr) {
+    arr = arr || []
+    return arr.length
+  }
+</wxs>
+
+<view class='submitdata' >
+  <button type="primary" bindtap="upload">
+    添加
+  </button>
+</view>

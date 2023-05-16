@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liu.bsbeacon.dao.CoordinateDao">
+    <select id="selectByCoorXAndCoorY" resultType="com.liu.bsbeacon.entity.CoordinateEntity">
+        select *
+        from coordinate
+        where coorX = #{coorX} and coorY = #{coorY}
+    </select>
+
+    <insert id="addCoordinate" useGeneratedKeys="true" keyProperty="id" parameterType="com.liu.bsbeacon.entity.CoordinateEntity">
+            insert into coordinate (coorX,coorY) values (#{coordinateX},#{coordinateY})
+
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,61 @@
+<!--pages/collect/collect.wxml-->
+
+<view class='input'>
+  <input placeholder='请输入当前采集的区域编号' name = "AreaNum" bindblur="InputAreaNum" value='{{form_info}}'/>
+</view>
+
+<view class='input'>
+  <input placeholder='请输入当前采集的X坐标' name = "CoordinateX" bindblur="InputX" value='{{form_info}}' />
+</view>
+
+<view class='input'>
+  <input placeholder='请输入当前采集的Y坐标' name = "CoordinateY" bindblur="InputY" value='{{form_info}}' />
+</view>
+
+<view class="input">
+    <input class="input" name = "collectnum"  placeholder="请设置采集数量" value='{{form_info}}'
+    bindblur="CollectNumberInput"/>
+  </view>
+  
+
+<wxs module="utils">
+  module.exports.max = function(n1, n2) {
+    return Math.max(n1, n2)
+  }
+  module.exports.len = function(arr) {
+    arr = arr || []
+    return arr.length
+  }
+</wxs>
+
+<view class="devices_summary">已搜索到 {{devices.length}} 个蓝牙信标:</view>
+<scroll-view class="device_list" scroll-y scroll-with-animation>
+  <view wx:for="{{devices}}" wx:key="index" data-device-id="{{item.deviceId}}" data-name="{{item.name || item.localName}}" bindtap="createBLEConnection" class="device_item" hover-class="device_item_hover">
+    <view style="font-size: 16px; color: #333;">{{item.name}}</view>
+    <view style="font-size: 10px">信号强度: {{item.RSSI}}dBm ({{utils.max(0, item.RSSI + 100)}}%)</view>
+    <view style="font-size: 10px">UUID: {{item.deviceId}}</view>
+    <view style="font-size: 10px">Service数量: {{utils.len(item.advertisServiceUUIDs)}}</view>
+  </view>
+</scroll-view>
+
+<view class='page-body'>
+ <view class='scan-view'>
+    <button type="primary" bindtap="startScan">开始采集</button>
+  </view>
+  <view class='scanAgain'>
+    <button type="primary" bindtap="scanAgain">再次采集</button>
+  </view>
+  <view class='changeArea'>
+    <button type="primary" bindtap="changeArea">更换区域</button>
+  </view>
+
+  <view class='cancle-view'>
+    <button type="primary" bindtap="cancleScan">停止采集</button>
+  </view>  
+</view> 
+  
+<view class='submitdata' >
+  <button type="primary" bindtap="upload">
+    提交数据
+  </button>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/parkingLot/parkingLot.wxml-->
+<view class="container">
+	
+
+    <scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" bindscroll="onScroll">
+		
+     <view id="nearby" class="section section-big nearby">
+			 <view class="title">已入驻停车场</view>
+             <view class='scan-view'>
+                <button type="primary" bindtap="addParkingLot">添加停车场</button>
+            </view>
+			  <view class="view_tupian_wenzi" wx:for="{{parkingLot}}" wx:key="id">
+				<image class="image_1" src="../../images/parkingLot.png"/>
+        <view class="view_wenzi2" data-name="{{item.parkingLotName}}" bindtap="inParkingLot"  >{{item.parkingLotName}}</view>
+        <view class='changeArea'>
+    <button type="warn" data-name="{{item.id}}" bindtap="deleteParkingLot">删除停车场</button>
+  </view>
+                    
+				
+			</view>
+		</view>
+		<view class="loading">努力加载中…</view>
+    </scroll-view>
+</view>

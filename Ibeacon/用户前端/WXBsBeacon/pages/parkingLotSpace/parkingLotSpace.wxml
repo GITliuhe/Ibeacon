@@ -1,0 +1,22 @@
+<!--pages/parkingLotSpace/parkingLotSpace.wxml-->
+<view class="container">
+	<view class="header {{scrollDown?'hidden':''}}">
+		<image class="logo" src="../../images/parkingLot.png"/>
+		<view class="name ellipsis">{{parkingLotName}}</view>
+		<view class="welcome ellipsis">欢迎光临{{shop.name}}！</view>
+		<view class="line"></view>
+		<view class="desc">请选择一个空闲车位！！！</view>
+	</view>
+	<view class="content-container">
+		<scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+			<view class="goods" wx:for="{{spaceList}}" wx:key="id">
+				
+					<image class="pic" src="../../images/space.jpeg"></image>
+					<view bindtap="startPosition" class="sold" data-name="{{item.sold}}">车位编号:{{item.sold}}</view>
+					<view class="price">￥15/h</view>
+				
+			</view>
+		</scroll-view>
+	</view>
+</view>
+

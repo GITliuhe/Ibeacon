@@ -1,0 +1,26 @@
+<!--pages/parkingSpace/parkingSpace.wxml-->
+<view class="container">
+	<view class="header {{scrollDown?'hidden':''}}">
+		<image class="logo" src="../../images/parkingLot.png"/>
+		<view class="name ellipsis">{{parkingLotName}}</view>
+		<view class="line"></view>
+	</view>
+	<view class="content-container">
+		<scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+            <view class='scan-view'>
+                <button type="primary" data-name="{{parkingLotName}}" bindtap="addParkingSpace">添加车位</button>
+            </view>
+			<view class="goods" wx:for="{{spaceList}}" wx:key="id">
+				
+					<image class="pic" src="../../images/space.jpeg"></image>
+					<view bindtap="startPosition" class="sold" data-name="{{item.sold}}">车位编号:{{item.sold}}</view>
+					<view class="price">￥15/h</view>
+                    <view class='changeArea'>
+                        <button type="warn" bindtap="deleteParkingSpace">删除车位</button>
+                    </view>
+                    
+				
+			</view>
+		</scroll-view>
+	</view>
+</view>

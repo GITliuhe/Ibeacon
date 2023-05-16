@@ -1,0 +1,31 @@
+<!--pages/position/position.wxml-->
+<!-- <view >
+    当前X坐标为：{{ CoordinateX}} 
+ </view>
+  <view >
+    当前Y坐标为：{{ CoordinateY}} 
+ </view> -->
+
+ <view class="main-body" >
+   <!--引入室内结构图-->
+   <image class="bg-image" src="../../images/2.jpg" mode="scaleToFill" ></image>
+
+   <!--动态的显示当前的位置-->
+   <image class="mark" src='../../images/position2.png' style="top: {{top}}px;left:{{left}}px"></image>
+
+   <image class="mark" src='../../images/destination.png' style="top: {{destinationTop}}px;left: {{destinationleft}}px"></image>
+
+
+   <!--动态的显示目标车位-->
+   <!-- <image class='position-img' src='../../images/position.png' bindtap='startposition'></image> -->
+
+<!-- 
+   X，Y 坐标对应关系
+   y : 8 ,       7 ,     6 ，    5   ,   4,     3 ,   2,    1
+   top: 30px , 115px ，205px ,  290px ,  380,  470,  560 , 650  {{top}}
+
+   X : 1 ,        2 ,  3   ,  4   ,5   ,  6,
+   left: 15px ,   75,  135 ,  200, 260 , 325  {{left}}
+
+ -->
+ </view>

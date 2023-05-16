@@ -1,0 +1,105 @@
+/* pages/addParkingLot/addParkingLot.wxss */
+.about{
+    padding: 15rpx;
+    background-color: #fff;
+  }
+  .scroll-view{
+    border-radius: 10rpx;
+    position: absolute;
+    width: 94%;
+    top: 3%;
+    left: 3%;
+    right: 3%;
+    bottom: 200rpx;
+    box-shadow: 3rpx 4rpx 8rpx rgba(0, 0, 0, 0.3);
+  }
+  
+  .gzh-view {
+    position: fixed;
+    bottom: 1%;
+    left: 5%;
+    width: 90%;
+    box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.3);
+  }
+  input{
+  
+      width: 90%;
+      margin: 0 auto;
+      height: 34px;
+      line-height: 44px;
+      padding: 10px 5%;
+      border: 1rpx  solid rgba(15, 14, 14, 0.048);
+  }
+  
+  .primary{
+  
+      width: 30%;
+      position: fixed;
+      bottom:30rpx;
+      left: 5%;
+  
+  
+  }
+  .devices_summary {
+      margin-top: 1px;
+    padding: 10px 5%;
+    font-size: 16px;
+  }
+  .device_list {
+   height: 400rpx;
+    margin: 50px 5%;
+    margin-top: 0;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    width: auto;
+  
+  }
+  .scan-view {
+      width: 45%;
+      position: absolute;
+      left:100px;
+      top:380px;  
+      height:15px
+  }
+
+  .scanAgain{
+    width: 45%;
+    position: absolute;
+    left: 100px;
+    top:430px;  
+    height:5px
+}
+.changeArea{
+  width: 45%;
+  position: absolute;
+  left: 100px;
+  top:430px;  
+  height:5px
+}
+  .cancle-view{  
+      width: 45%;
+      position: absolute;
+      left: 100px;
+      top:480px;  
+      height:5px
+  
+  }
+
+  
+  
+  .submitdata{
+      width: 45%;
+      position: absolute;
+      left: 100px;
+      top:330px;  
+      height:5px
+  }
+  
+  
+  .getdata{
+      width: 45%;
+      position: absolute;
+      left: 100px;
+      top:530px;  
+      height:5px
+  }

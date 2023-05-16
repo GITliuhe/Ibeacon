@@ -1,0 +1,24 @@
+<!--pages/home/search.wxml-->
+<view class="container">
+	<view class="header">
+		<view class="search">
+			<image class="icon" src="../../images/home/icon_search.png"/>
+			<input bindinput="inputSearch" placeholder="输入停车场名" auto-focus/>
+		</view>
+		<button class="yellow {{searchWords.length?'':'disabled'}}" size="mini" hover-class="hover" loading="" plain="" disabled="{{!searchWords.length}}"
+				bindtap="doSearch">搜索
+		</button>
+    </view>
+    
+    <view id="result" class="result">
+		<scroll-view scroll-y="true">
+			<view class="view_tupian_wenzi" wx:for="{{parkingLot}}" wx:key="id">
+				<image class="image_1" src="../../images/parkingLot.png"/>
+        <view class="view_wenzi2">{{item.parkingLotName}}</view>
+                    
+				
+			</view>
+			<view class="loading">努力加载中…</view>
+		</scroll-view>
+	</view>
+</view>

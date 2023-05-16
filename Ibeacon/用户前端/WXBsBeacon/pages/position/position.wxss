@@ -1,0 +1,29 @@
+/* pages/position/position.wxss */
+
+.main-body {
+    position: relative;
+  }
+
+.pos-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .bg-image
+{ 
+  width : 100%;
+  height : 100%;  
+  position: fixed;  
+  z-index: -1;  
+}
+
+  .mark {
+    position: absolute;
+    z-index: 1000;
+    width: 64rpx;
+    height: 64rpx;
+  }

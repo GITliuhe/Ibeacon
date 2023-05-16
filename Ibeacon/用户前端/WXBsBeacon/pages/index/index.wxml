@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<button class="scan-view" type="primary"  bindtap="login">
+进入小程序
+</button><!--授权登录-->
+ 
+<!-- <view wx:else class="root">
+  <image class="touxiang" src="{{userInfo.avatarUrl}}"></image>
+  <text class="nicheng">{{userInfo.nickName}}</text>
+  <button  bindtap="loginOut">退出登录</button><!--退出登录--> 
+<!-- </view> -->
+
+<view>
+<image class="bg-image" mode="scaleToFill" src="../../images/bg2.png"></image>
+</view>
+

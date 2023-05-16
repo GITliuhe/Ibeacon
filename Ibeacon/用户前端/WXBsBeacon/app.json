@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/home/home",
+    "pages/home/search",
+    "pages/parkingLotSpace/parkingLotSpace",
+    "pages/position/position",
+    "pages/collectNew/collectNew",
+    "pages/collect/collect",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#179B16",
+    "navigationBarTitleText": "蓝牙定位",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F8F8"
+  },
+
+  "tabBar": {
+		"color": "#878787",
+		"selectedColor": "#000",
+		"borderStyle": "black",
+		"backgroundColor": "#fcfcfc",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "images/home/home_1.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/collectNew/collectNew",
+				"iconPath": "images/collect.png",
+				"text": "采集"
+			}
+		]
+	},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

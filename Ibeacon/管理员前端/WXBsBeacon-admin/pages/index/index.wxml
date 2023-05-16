@@ -1,0 +1,23 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+	
+
+    <scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" bindscroll="onScroll">
+		
+
+		
+
+     <view id="nearby" class="section section-big nearby">
+			 <view class="title">停车场列表</view>
+			  <view class="view_tupian_wenzi" wx:for="{{parkingLot}}" wx:key="id">
+				<image class="image_1" src="../../images/parkingLot.png"/>
+        <view class="view_wenzi2" data-name="{{item.parkingLotName}}" bindtap="inParkingLot"  >{{item.parkingLotName}}</view>
+                    
+				
+			</view>
+		</view>
+		<view class="loading">努力加载中…</view>
+    </scroll-view>
+</view>
+
+
